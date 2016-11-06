@@ -104,15 +104,3 @@ def cardtostring(card):
 	suitlist = ["S", "C", "H", "D"]
 	suit = suitlist[card % 4]
 	return value + suit
-
-
-def samevalue(card1, card2):
-	'''
-	takes in two integers from 0 to 51 corresponding to cards
-	return True if these cards should be interpreted as having the same value
-	'''
-	# NOTE: not used anywhere else in the code
-	if (abs(card1 - card2) < 4) and (card2/4 == card1/4):
-		return True
-	else:
-		return False
