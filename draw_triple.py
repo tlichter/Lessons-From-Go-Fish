@@ -1,6 +1,6 @@
+# see http://wp.me/p7Xt00-2X5 for the story that motivated this code.
 # run a simulation of drawing a 7-card hand from a standard 52-card deck.
 # approximate the probability of drawing three or four cards of the same value, e.g. 4H, 4C, 4D.
-# because i was arguing with dovid and naomi about their rules for go fish (where you have to reshuffle the deck if someone gets dealt a triple).
 
 import random
 
