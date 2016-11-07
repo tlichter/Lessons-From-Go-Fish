@@ -76,8 +76,8 @@ def cardtostring(card):
 	helper for printhand().
 	'''
 	card = card % 52
-	valuelist = range(2,11) + ["J", "Q", "K", "A"]
+	valuelist = range(2,11) + ["J", "Q", "K", "A"] # 2, 3, 4, ..., Jack, Queen, King, Ace
 	value = str(valuelist[card / 4])
-	suitlist = ["S", "C", "H", "D"]
+	suitlist = ["S", "C", "H", "D"] # spades, clubs, hearts, diamonds
 	suit = suitlist[card % 4]
 	return value + suit
