@@ -18,19 +18,6 @@ def runsimulation(numtrials):
 	return truecount / numtrials
 
 
-def runsimulation4(numtrials):
-	'''
-	take in integer numtrials, the number of numtrials to run
-	draw a 7-card hand and check for quadruples, and do that numtrials times
-	return the fraction of trials that contain quadruples
-	'''
-	truecount = 0.
-	for i in range(0, numtrials):
-		if hasquadruple(drawhand()):
-			truecount += 1
-	return truecount / numtrials
-
-
 def drawhand():
 	'''
 	picks seven digits from 0 - 51 without replacement, 
@@ -59,19 +46,6 @@ def hastriple(hand):
 		return False
 
 
-def hasquadruple(hand):
-	'''
-	takes in list hand
-	return True if hand contains a triple (3 cards of the same value)
-	return False otherwise
-	'''
-	valuelist = countvalues(hand)
-	if (4 in valuelist):
-		return True
-	else:
-		return False
-
-
 def countvalues(hand):
 	'''
 	returns a list of 13 numbers, corresponding to the number of cards valued 2, 3, ..., J, Q, K, A in the hand.
@@ -86,6 +60,7 @@ def printhand(hand):
 	'''
 	converts list of numbers hand into card values.
 	prints the hand.
+	this is for checking if drawhand() is working properly.
 	'''
 	handstring = ""
 	for h in hand:
@@ -98,6 +73,7 @@ def cardtostring(card):
 	takes in an integer card.
 	return the card that corresponds to that number (mod 52).
 	0, 1, 2, 3, 4, 5, ..., 51 go to 2S, 2C, 2H, 2D, 3S, 3C, ..., AD.
+	helper for printhand().
 	'''
 	card = card % 52
 	valuelist = range(2,11) + ["J", "Q", "K", "A"]
