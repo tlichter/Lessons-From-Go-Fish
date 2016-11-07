@@ -1,4 +1,5 @@
 # see http://wp.me/p7Xt00-2X5 for the story that motivated this code.
+# pardon the sloppiness - this was written over the course of one plane ride.
 # run a simulation of drawing a 7-card hand from a standard 52-card deck.
 # approximate the probability of drawing three or four cards of the same value, e.g. 4H, 4C, 4D.
 
